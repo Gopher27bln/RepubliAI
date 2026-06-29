@@ -4,9 +4,9 @@ import type { ComponentType } from "react";
 import { cn } from "@/lib/utils";
 import type { Channel } from "@/lib/types";
 import {
-  Twitter,
-  Linkedin,
-  Instagram,
+  XIcon,
+  Briefcase,
+  Camera,
   Mail,
   Bell,
   Mic2,
@@ -26,21 +26,21 @@ const CHANNELS: ChannelConfig[] = [
     id: "twitter",
     label: "Twitter / X",
     description: "Kurzer Post, max. 280 Zeichen",
-    icon: Twitter,
+    icon: XIcon,
     color: "bg-sky-50 border-sky-200 text-sky-700",
   },
   {
     id: "linkedin",
     label: "LinkedIn",
     description: "Professioneller Beitrag mit Erkenntnissen",
-    icon: Linkedin,
+    icon: Briefcase,
     color: "bg-blue-50 border-blue-200 text-blue-700",
   },
   {
     id: "instagram",
     label: "Instagram",
     description: "Caption mit Hashtags",
-    icon: Instagram,
+    icon: Camera,
     color: "bg-pink-50 border-pink-200 text-pink-700",
   },
   {

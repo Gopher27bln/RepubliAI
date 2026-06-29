@@ -3,9 +3,9 @@
 import { useState } from "react";
 import type { ComponentType } from "react";
 import {
-  Twitter,
-  Linkedin,
-  Instagram,
+  XIcon,
+  Briefcase,
+  Camera,
   Mail,
   Bell,
   Mic2,
@@ -20,9 +20,9 @@ const CHANNEL_META: Record<
   Channel,
   { label: string; Icon: ComponentType<{ className?: string }>; color: string }
 > = {
-  twitter: { label: "Twitter / X", Icon: Twitter, color: "text-sky-500" },
-  linkedin: { label: "LinkedIn", Icon: Linkedin, color: "text-blue-600" },
-  instagram: { label: "Instagram", Icon: Instagram, color: "text-pink-500" },
+  twitter: { label: "Twitter / X", Icon: XIcon, color: "text-sky-500" },
+  linkedin: { label: "LinkedIn", Icon: Briefcase, color: "text-blue-600" },
+  instagram: { label: "Instagram", Icon: Camera, color: "text-pink-500" },
   newsletter: { label: "Newsletter", Icon: Mail, color: "text-violet-600" },
   push: { label: "Push", Icon: Bell, color: "text-orange-500" },
   audio: { label: "Audio-Skript", Icon: Mic2, color: "text-emerald-600" },
