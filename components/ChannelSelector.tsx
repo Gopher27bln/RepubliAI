@@ -105,7 +105,7 @@ export default function ChannelSelector({ selected, onChange }: Props) {
           {selected.length === CHANNELS.length ? "Alle abwählen" : "Alle wählen"}
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-2 gap-2">
         {CHANNELS.map(({ id, label, description, icon: Icon, color }) => {
           const active = selected.includes(id);
           return (
@@ -126,9 +126,9 @@ export default function ChannelSelector({ selected, onChange }: Props) {
                   active ? "" : "text-slate-400"
                 )}
               />
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-semibold leading-tight">{label}</p>
-                <p className="mt-0.5 text-[10px] leading-tight opacity-75">
+                <p className="mt-0.5 text-[10px] leading-tight opacity-75 line-clamp-2">
                   {description}
                 </p>
               </div>
