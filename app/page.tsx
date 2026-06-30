@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, Zap } from "lucide-react";
+import { Sparkles, Zap, FlaskConical } from "lucide-react";
 import ContentInput from "@/components/ContentInput";
 import ChannelSelector from "@/components/ChannelSelector";
 import ResultsPanel from "@/components/ResultsPanel";
@@ -88,6 +88,16 @@ export default function Home() {
           </button>
         </div>
       </header>
+
+      {/* Demo notice */}
+      <div className="border-b border-amber-200 bg-amber-50 px-6 py-2">
+        <div className="mx-auto flex max-w-screen-xl items-center gap-2 text-xs text-amber-800">
+          <FlaskConical className="h-3.5 w-3.5 shrink-0" />
+          <span>
+            <strong>Demo-Modus:</strong> Es ist kein LLM hinterlegt — die Ausgaben sind Platzhalter-Texte. Qualitativ hochwertige Inhalte entstehen erst mit einem echten Sprachmodell (z.&nbsp;B. GPT-4o oder Claude).
+          </span>
+        </div>
+      </div>
 
       {/* Main layout */}
       <main className="mx-auto w-full max-w-screen-xl flex-1 px-6 py-8">
