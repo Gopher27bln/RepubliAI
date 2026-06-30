@@ -78,21 +78,21 @@ export default function ContentInput({
         <label className="mb-2 block text-sm font-semibold text-slate-700">
           Tonalität
         </label>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           {TONES.map(({ value, label, emoji }) => (
             <button
               key={value}
               type="button"
               onClick={() => onToneChange(value)}
               className={cn(
-                "flex flex-col items-center justify-center gap-1 rounded-xl border-2 px-1 py-2.5 text-center transition",
+                "flex items-center gap-2 rounded-xl border-2 px-3 py-2.5 text-left transition",
                 tone === value
                   ? "border-brand bg-brand text-white"
                   : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
               )}
             >
-              <span className="text-base leading-none">{emoji}</span>
-              <span className="text-[11px] font-medium leading-tight">{label}</span>
+              <span className="shrink-0 text-base leading-none">{emoji}</span>
+              <span className="text-xs font-medium leading-tight">{label}</span>
             </button>
           ))}
         </div>
