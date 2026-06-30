@@ -85,14 +85,14 @@ export default function ContentInput({
               type="button"
               onClick={() => onToneChange(value)}
               className={cn(
-                "flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 text-sm font-medium transition",
+                "flex flex-col items-center justify-center gap-1 rounded-xl border-2 px-2 py-2.5 text-xs font-medium transition",
                 tone === value
                   ? "border-brand bg-brand text-white"
                   : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
               )}
             >
-              <span>{emoji}</span>
-              <span>{label}</span>
+              <span className="text-base leading-none">{emoji}</span>
+              <span className="leading-tight">{label}</span>
             </button>
           ))}
         </div>
